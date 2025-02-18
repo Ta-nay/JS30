@@ -1,0 +1,28 @@
+body{
+    background-image: url(../drumkit/assets/background.jpg);
+}
+.keys div{
+    border: 5px solid black;
+    margin: 15px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+ }
+ .keys div h2{
+    color: white;
+    font-size: 20px;
+    font-style: bold;
+ }
+ .keys div p{
+    color: yellow;
+    size: 20px;
+ }
+ .keys{
+    height: 175vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
