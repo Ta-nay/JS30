@@ -13,7 +13,8 @@ body{
  }
  .keys div h2{
     color: white;
-    font-size: 20px;
+    text-shadow: 2px;
+    font-size: 40px;
     font-style: bold;
  }
  .keys div p{
@@ -21,8 +22,14 @@ body{
     size: 20px;
  }
  .keys{
-    height: 175vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 40%;
  }
+key:active, .playing {
+    transform: scale(1.1); /* Slightly enlarges the key */
+    border-color: gold !important; /* Changes background */
+    box-shadow: 0 0 15px gold; /* Adds a glow effect */
+   
+}
