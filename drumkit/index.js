@@ -12,21 +12,37 @@ const sounds = {
 
 
 const keys = document.querySelectorAll(".key");
+
+// Click event for mouse clicks
 keys.forEach(key => {
     key.addEventListener("click", function() {
-        
-        let keyText = this.querySelector("h2").textContent;
-        let soundFile = sounds[keyText]; 
-        
-        if (soundFile) {
-            let audio = new Audio(soundFile);
-            audio.play(); 
-        }
-
-
-        this.classList.add('playing')
-        setTimeout(() => {
-            this.classList.remove("playing");
-        }, 100);
+        playSound(this);
     });
 });
+
+// Keyup event for keyboard presses (Global)
+document.addEventListener("keyup", function(event) {
+    let keyText = event.key.toUpperCase(); // Convert to match key labels
+    let keyElement = [...keys].find(key => key.querySelector("h2").textContent === keyText);
+    
+    if (keyElement) {
+        playSound(keyElement);
+    }
+});
+
+// Function to play sound and animate
+function playSound(element) {
+    let keyText = element.querySelector("h2").textContent;
+    let soundFile = sounds[keyText]; 
+
+    if (soundFile) {
+        let audio = new Audio(soundFile);
+        audio.play(); 
+    }
+
+    // Add animation class
+    element.classList.add('playing');
+    setTimeout(() => {
+        element.classList.remove("playing");
+    }, 70);
+}
