@@ -23,8 +23,9 @@ keys.forEach(key => {
 // Keyup event for keyboard presses (Global)
 document.addEventListener("keyup", function(event) {
     let keyText = event.key.toUpperCase(); // Convert to match key labels
-    let keyElement = [...keys].find(key => key.querySelector("h2").textContent === keyText);
     
+    let keyElement = [...keys].find(key => key.querySelector("h2").textContent === keyText);
+    console.log(keyElement)
     if (keyElement) {
         playSound(keyElement);
     }
