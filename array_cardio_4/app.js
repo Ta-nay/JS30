@@ -27,7 +27,7 @@ const inventors = [
     if(ele.year>=1500 && ele.year<1600)
         return true;
   })
-  //console.log(dob);
+  console.log(dob);
   // Array.prototype.map()
   // 2. Give us an array of the inventors first and last names
   const fullName = inventors.map(ele =>
@@ -104,7 +104,7 @@ const inventors = [
     return lastNameA.localeCompare(lastNameB);
   });
   
-  console.log(sortedByLastName);
+ // console.log(sortedByLastName);
   
 
   // 8. Reduce Exercise
