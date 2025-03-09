@@ -19,10 +19,7 @@ search.addEventListener('keyup', (e)=>{
         return true;
 })
     const suggestions = document.querySelector('.suggestions')
-    const lis = document.querySelectorAll('li')
-    lis.forEach(ele=>{
-        ele.remove()
-    })
+    suggestions.innerHTML= ''
     searched.forEach(ele =>{
         const child = document.createElement('li');
         child.innerText = `${ele.city},${ele.state}`
