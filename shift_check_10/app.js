@@ -3,7 +3,7 @@ let lastChecked = false;
 
 function handleclick(e) {
     let inBetween = false;
-    if(e.shiftKey && this.checked){
+    if(e.shiftKey && this.checked && lastChecked !== null){
         
         items.forEach(inputBox =>{
             if(inputBox === this || inputBox === lastChecked)
